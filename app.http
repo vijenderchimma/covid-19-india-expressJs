@@ -1,0 +1,42 @@
+GET http://localhost:3000/states/
+###
+
+GET http://localhost:3000/states/3/
+###
+
+GET http://localhost:3000/districts/1/
+###
+
+DELETE http://localhost:3000/districts/2/
+###
+
+PUT http://localhost:3000/districts/1/
+Content-Type: application/json
+
+{
+  "districtName": "Mulugu",
+  "stateId": 29,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 2000,
+  "deaths": 100
+}
+###
+
+GET http://localhost:3000/states/29/stats/
+###
+
+GET http://localhost:3000/districts/3/details/
+###
+
+POST http://localhost:3000/districts/
+Content-Type: application/json
+
+{
+    "districtName": "Warangal",
+    "stateId": 29,
+    "cases": 9000,
+    "cured": 7000,
+    "active": 1800,
+    "deaths": 200
+}
